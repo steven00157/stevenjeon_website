@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steven Jeon</title>
+<meta name="description" content="Personal homepage of Steven Jeon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf9; --fg: #1c1917; --muted: #78716c; --card: #ffffff;
+    --line: #e7e5e4; --accent: #2563eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c0a09; --fg: #f5f5f4; --muted: #a8a29e; --card: #1c1917;
+      --line: #292524; --accent: #60a5fa;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c0a09; --fg: #f5f5f4; --muted: #a8a29e; --card: #1c1917;
+    --line: #292524; --accent: #60a5fa;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--fg);
+    line-height: 1.6; padding: 0 16px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; }
+  nav .logo { font-weight: 700; letter-spacing: -0.02em; }
+  nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 0.95rem; }
+  nav a:hover { color: var(--fg); }
+  header { padding: 72px 0 56px; }
+  .avatar {
+    width: 72px; height: 72px; border-radius: 50%; background: var(--accent); color: #fff;
+    display: grid; place-items: center; font-weight: 700; font-size: 1.5rem; margin-bottom: 24px;
+  }
+  h1 { font-size: clamp(2rem, 6vw, 3rem); letter-spacing: -0.03em; line-height: 1.1; }
+  header p { color: var(--muted); font-size: 1.15rem; margin-top: 16px; max-width: 34ch; }
+  section { padding: 40px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  .card h3 { font-size: 1rem; margin-bottom: 6px; }
+  .card p { color: var(--muted); font-size: 0.95rem; }
+  .links { display: flex; flex-wrap: wrap; gap: 12px; }
+  .links a {
+    color: var(--fg); text-decoration: none; border: 1px solid var(--line); border-radius: 999px;
+    padding: 8px 18px; font-size: 0.95rem; background: var(--card);
+  }
+  .links a:hover { border-color: var(--accent); color: var(--accent); }
+  footer { padding: 40px 0; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <span class="logo">Steven Jeon</span>
+    <div><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+  </nav>
+
+  <header>
+    <div class="avatar">SJ</div>
+    <h1>Hi, I'm Steven.</h1>
+    <p>Welcome to my corner of the internet. This is where I share what I'm working on and how to reach me.</p>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>A few sentences about you go here: where you're based, what you do, and what you're interested in. Keep it short and friendly.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card"><h3>Project one</h3><p>A short description of something you've made or worked on.</p></div>
+      <div class="card"><h3>Project two</h3><p>Another thing you're proud of, and what it does.</p></div>
+      <div class="card"><h3>Project three</h3><p>Something in progress, or an idea you're exploring.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="links">
+      <a href="https://github.com/steven00157">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Email</a>
+    </div>
+  </section>
+
+  <footer>© <span id="y"></span> Steven Jeon</footer>
+</div>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
